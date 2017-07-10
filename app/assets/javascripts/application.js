@@ -13,3 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+    $(document).foundation();
+});
+// Patch for a Bug in v6.3.1
+$('[data-toggle-menu]').on("click", function() {
+    $("#overlay-nav-menu").toggleClass("is-open");
+});
